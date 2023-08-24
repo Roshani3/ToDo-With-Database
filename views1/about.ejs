@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>To Do app</title>
+   
+  </head>
+  <body>
+    <%- include("components/header",{user : user, pic:pic}) %>
+
+    <h1>About Our Todo App</h1>
+    <p>
+      Our todo app is a simple and easy-to-use tool for managing your tasks and
+      staying organized. With our app, you can:
+    </p>
+    <ul>
+      <li>Add new tasks</li>
+      <li>Mark tasks as complete</li>
+      <li>Delete tasks</li>
+    </ul>
+    <p>
+      Our app is designed to be intuitive and user-friendly, so you can start
+      using it right away without any training or tutorials. Try it out today
+      and see how it can help you stay on top of your tasks!
+    </p>
+    
+    <%- include("components/data",{data : data}) %>
+  </body>
+</html>

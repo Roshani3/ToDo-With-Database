@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>To Do app</title>
+  
+  </head>
+  <body>
+    <%- include("components/header",{user : user, pic:pic}) %>
+
+    <h1>Welcome to To Do app!</h1>
+    <p>Here you can find information about me and my work.</p>
+    <h2>Contact Information</h2>
+    <ul>
+      <li>Email: example@example.com</li>
+      <li>Phone: 555-555-5555</li>
+      <li>Address: 123 Main St, Anytown USA</li>
+    </ul>
+    
+    <%- include("components/data",{data : data}) %>
+  </body>
+</html>

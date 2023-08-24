@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>To Do app</title>
+   
+  </head>
+  <body>
+    <%- include("components/header",{user : user, pic:pic}) %>
+    <h1>Welcome to Todo!</h1>
+    <div class="container">
+      <div class="task-list">
+        <h2>Task List</h2>
+        <div id="todo-item" class="todo-item"></div>
+      </div>
+      <div class="task-form">
+        <h2>Add Task</h2>
+        <div id="inputdiv">
+          <input placeholder="insert to do.." id="todoInput" />
+          <select id="priority">
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+          </select>
+          <input type="file" name="todoimg" id="todoimgid" accept="image/*">
+          <button id="addBtn">Add..</button>
+        </div>
+      </div>
+    </div>
+    <%- include("components/data",{data : data}) %>
+    <script src="/todoScript.js"></script>
+   
+  </body>
+</html>

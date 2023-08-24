@@ -1,0 +1,90 @@
+<html>
+  <head>
+    <title>Register</title>
+    <style>
+      body {
+        background-color: #f2f2f2;
+        font-family: Arial, sans-serif;
+      }
+      h1 {
+        text-align: center;
+        color: #333;
+      }
+      form {
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        width: 300px;
+        margin: 0 auto;
+      }
+      label {
+        display: block;
+        margin-bottom: 10px;
+        color: #666;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="password"] {
+        width: 95%;
+        padding: 10px;
+        border-radius: 3px;
+        border: 1px solid #ccc;
+        margin-bottom: 20px;
+        font-size: 16px;
+      }
+      input[type="submit"] {
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 3px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background-color: #3e8e41;
+      }
+      button {
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 3px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #3e8e41;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <h1 id="hedr">Register</h1>
+    <form action="/register" method="post" enctype="multipart/form-data">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required />
+
+      <label for="profileimg">Profile Image:</label>
+      <input type="file" id="profileimg" name="profileimg" accept="image/*">
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required />
+
+      <input type="submit" value="Register" />
+      <a href="/login">Login here</a>
+    </form>
+    <% if (error) { %>
+      <p id="error-message" style="color: red;text-align: center;font-size: 40px;"><%= error %></p>
+      <script>
+        setTimeout(function() {
+          document.getElementById("error-message").style.display = "none";
+        }, 5000); 
+      </script>
+      <% } %>
+  </body>
+</html>
